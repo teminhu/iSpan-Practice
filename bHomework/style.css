@@ -1,0 +1,749 @@
+:root {
+  --bs-navbar-toggler-padding-x: 1rem;
+  --bs-aspect-ratio: 50%;
+  --main-color: #4ba87d;
+  --btn-font-color: #fff;
+  --bs-success: red
+}
+
+.navbar {
+  --bs-navbar-padding-y: 1.5rem;
+  padding: var(--bs-navbar-padding-y) 0;
+  flex-wrap: nowrap;
+}
+
+.btn {
+  --bs-btn-font-weight: 800;
+  font-weight: var(--bs-btn-font-weight);
+  padding: 0 !important;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.82px;
+  line-height: 13px;
+  border: 3px solid var(--main-color);
+}
+
+.btn-success {
+  --bs-btn-bg: var(--main-color);
+  --bs-btn-border-color: var(--main-color);
+}
+
+.signupbtn {
+  width: 110px;
+  height: 25px;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.navbar-brand {
+  margin: 0;
+}
+
+.nav-link {
+  --bs-navbar-nav-link-padding-x: 4px;
+  --navbar-nav-link-padding-y: 4px;
+  --bs-nav-link-font-weight: 800;
+  padding: var(--bs-navbar-nav-link-padding-x);
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: var(--bs-nav-link-font-weight);
+  letter-spacing: 1.27px;
+  margin-inline: 1rem;
+  border-bottom: 3px solid var(--main-color);
+}
+
+
+.main_h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 2.1rem;
+  line-height: 46px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: -5rem;
+
+}
+
+.headerimg {
+  --bs-aspect-ratio: 50%;
+  max-width: 680px;
+}
+
+.colbutton {
+  padding-top: 1rem;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 1.5rem;
+
+  p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .btn2 {
+    padding-inline: 12px;
+  }
+
+  button {
+    font-size: 13px;
+    width: 143px;
+    height: 40px;
+  }
+
+  .btn-outline-success {
+    color: var(--main-color);
+  }
+}
+
+.main_bg2 {
+  background: #000;
+  background: url(/asset/image/bg2.png);
+  background-size: cover;
+}
+
+.mainbox2 {
+  padding-block: 1.5rem;
+  padding-inline: 0;
+}
+
+.mainimg1 {
+  max-width: 944px;
+}
+
+.content {
+  text-align: center;
+  align-content: center;
+  color: #fff;
+
+  h2 {
+    font-size: 22px;
+    line-height: 29px;
+    font-weight: 900;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 12px;
+
+  }
+
+  .btn-greenword-whitebg {
+    background: #fff;
+    font-size: 6px;
+    line-height: 7px;
+    color: var(--main-color);
+    border: 0;
+    padding: 0;
+    width: 65px;
+    height: 21px;
+  }
+}
+
+.mainbox3 {
+  max-width: 390px;
+
+  .card {
+    max-width: 212px;
+    height: 294px;
+  }
+
+  .card-img {
+    height: 166px;
+    overflow: hidden;
+    border-radius: 0;
+  }
+
+  .card-img1,
+  img {
+    translate: 0 15px;
+    scale: 1.25;
+  }
+
+  .card-img2,
+  img {
+    translate: 10px 5px;
+    scale: 1.25;
+  }
+
+  .cardbtn {
+    border: 0px;
+    color: var(--main-color);
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    line-height: 14px;
+  }
+
+  .card-text {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0;
+
+  }
+
+  .cardtext-h {
+    width: 232px;
+    font-size: 28px;
+    line-height: 31px;
+    font-weight: 900;
+    font-family: "Playfair Display", serif;
+
+    .span {
+      word-wrap: break-word;
+    }
+  }
+
+  p {
+    margin-bottom: 0px;
+  }
+
+  .cardtext-p {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.mainbox4 {
+  /* position: relative; */
+
+  .box4imgtext {
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    padding-left: 1rem;
+
+    h3 {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 0px;
+      position: absolute;
+      bottom: 2rem;
+
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 14px;
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+
+  h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+
+  }
+
+  .form-control {
+    padding: 0.7rem 0.8rem;
+    font-size: 13px;
+  }
+
+  .formbutton {
+    width: 144px;
+    height: 42px;
+  }
+
+  .rectext {
+    color: var(--main-color);
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.6px;
+
+  }
+}
+
+.secbox1 {
+  max-width: 617px;
+  padding-block: 58px;
+
+  h3 {
+    font-weight: 900;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    line-height: 36px;
+    padding-bottom: 36px;
+  }
+
+  .icom1 {
+    width: 104px;
+
+  }
+
+  .icom2 {
+    width: 55px;
+  }
+
+  .icom3 {
+    width: 94px;
+  }
+
+  .icom4 {
+    width: 92px;
+  }
+
+  .icom5 {
+    width: 91px;
+  }
+}
+
+.secbox2 {
+  width: 100%;
+  height: 290px;
+  background: var(--main-color);
+
+  h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    color: #fff;
+    font-size: 42px;
+    line-height: 48px;
+    padding-block: 50px;
+  }
+
+  .planbtn {
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.65px;
+    font-weight: 900;
+    font-family: "Raleway", sans-serif;
+    color: var(--main-color);
+    background: #fff;
+    border: 0px;
+    width: 131px;
+    height: 42px;
+  }
+}
+
+.secbox3 {
+  /* margin-inline: 20px; */
+  border-bottom: 2px solid #ccc;
+
+  .order-md-2 {
+    position: relative;
+    top: -22px;
+  }
+
+  p {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.footer {
+  p {
+    margin-bottom: 0px;
+    font-size: 9px;
+    line-height: 19px;
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --mainbox1_padding_y: 3.25rem;
+    --mainbox1_padding_x: 3rem;
+  }
+
+
+
+  .main_bg {
+    background: url(/asset/image/bg1.png) center center no-repeat;
+    background-size: cover;
+    max-width: 1440px;
+    padding-top: 1rem;
+    padding-bottom: calc(1rem + 58px);
+  }
+
+
+  .btn2 {
+    button {
+      max-width: 131px;
+      height: 42px;
+    }
+  }
+
+  .headerimg {
+    max-width: 445px;
+  }
+
+  .mainbox1 {
+    padding-block: var(--mainbox1_padding_y);
+    max-width: 711px;
+  }
+
+  .main_h1 {
+    font-size: 2.375rem;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    white-space: pre;
+    margin-bottom: -5rem;
+    padding-left: 5px;
+  }
+
+
+
+  .colbutton {
+    position: absolute;
+    top: 130px;
+    left: 20px;
+    padding: 0px;
+
+    p {
+      max-width: 300px;
+      padding-top: 20px;
+    }
+
+    .btn2 {
+      padding-left: 10px;
+    }
+
+  }
+
+  .content {
+
+    h2 {
+      font-size: 38px;
+      line-height: 51px;
+      font-weight: 900;
+      margin-bottom: 41px;
+    }
+
+    .btn-greenword-whitebg {
+      font-size: 13px;
+      line-height: 15px;
+      width: 132px;
+      height: 42px;
+    }
+  }
+
+
+
+
+  .mainbox2 {
+    padding-block: 5.25rem;
+  }
+
+  .mainbox3 {
+    max-width: 710px;
+    height: 435px;
+    padding-bottom: 87px;
+  }
+
+  .mainbox4 {
+    .rectext {
+      font-size: 13px;
+      height: 15px;
+      text-align: left;
+      padding-left: 16px;
+    }
+  }
+
+  .secbox2 {
+    height: 240px;
+
+    h2 {
+      line-height: 56px;
+      padding-block: 45px;
+    }
+  }
+
+  .secbox3 {
+    max-width: 711px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+
+    /* max-width: 450px; */
+    .order-md-2 {
+      position: static;
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 14px;
+    }
+  }
+
+  .footer {
+    p {
+      padding-top: 26px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav-link {
+    --bs-nav-link-font-size: 17px;
+    line-height: 20px;
+    padding: 7px;
+    font-size: var(--bs-nav-link-font-size);
+    border-bottom: 5px solid var(--main-color);
+  }
+
+  .signupbtn {
+    width: 168px;
+    height: 41px;
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .main_bg {
+    padding-top: 3.25rem;
+    padding-bottom: calc(3.25rem + 80px);
+  }
+
+  .mainbox1 {
+    max-width: 1088px;
+  }
+
+  .main_h1 {
+    font-size: 3.5rem;
+    line-height: 71px;
+    padding-left: 0px;
+  }
+
+  .headerimg {
+    max-width: 680px;
+  }
+
+  .colbutton {
+    top: 200px;
+    left: 10px;
+    padding: 0px 6px 0px;
+
+    p {
+      max-width: 460px;
+      font-size: 19px;
+      line-height: 26px;
+      padding-top: 0px;
+    }
+
+    .btn2 {
+      padding-left: 10px;
+    }
+
+    button {
+      font-size: 21px;
+      max-width: 200px;
+      height: 56px;
+    }
+  }
+
+  .mainbox2 {
+    padding-block: 8.25rem;
+
+    .col {
+      flex: 0 0 320px;
+    }
+  }
+
+  .content {
+
+    h2 {
+      font-size: 60px;
+      line-height: 80px;
+      margin-bottom: 60px;
+    }
+
+    .btn-greenword-whitebg {
+      font-size: 21px;
+      line-height: 25px;
+      width: 200px;
+      height: 65px;
+
+    }
+  }
+
+  .mainbox3 {
+    max-width: 1098px;
+    height: 683px;
+    padding-bottom: 133px;
+
+    .card {
+      max-width: 322px;
+      height: 450px;
+      overflow: hidden;
+
+      .card-img {
+        height: 252px;
+        overflow: hidden;
+        border-radius: 0;
+      }
+
+      .card-img1,
+      img {
+        translate: 0 25px;
+        scale: 1.25;
+      }
+
+      .card-img2,
+      img {
+        translate: 10px 20px;
+        scale: 1.25;
+      }
+
+      .card-text {
+        font-size: 16px;
+        line-height: 26px;
+
+      }
+    }
+
+    .cardbtn {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    .cardtext-h {
+      width: 365px;
+      font-size: 44px;
+      line-height: 48px;
+      font-weight: 900;
+    }
+
+    .cardtext-p {
+      font-size: 19px;
+      line-height: 26px;
+    }
+  }
+
+  .mainbox4 {
+    padding-inline: 6rem;
+    padding-bottom: 75px;
+
+    .box4imgtext {
+      font-family: "Raleway", sans-serif;
+      color: #fff;
+
+      h3 {
+        font-size: 34px;
+        line-height: 40px;
+        bottom: 2.5rem;
+      }
+
+      p {
+        font-size: 19px;
+        line-height: 22px;
+      }
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 44px;
+      line-height: 48px;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 54px;
+    }
+
+
+
+    .form-control-lg {
+      padding: 1rem 1rem;
+      font-size: 21px;
+    }
+
+    .formbutton {
+      width: 221px;
+      height: 65px;
+      font-size: 21px;
+      line-height: 25px;
+      letter-spacing: 1.05px;
+    }
+
+    .rectext {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+
+  .secbox1 {
+    max-width: 926px;
+    padding-bottom: 146px;
+
+    h3 {
+      font-size: 44px;
+      line-height: 48px;
+      padding-top: 0px;
+      padding-bottom: 54px;
+    }
+
+    .icom1 {
+      width: 160px;
+
+    }
+
+    .icom2 {
+      width: 85px;
+    }
+
+    .icom3 {
+      width: 145px;
+    }
+
+    .icom4 {
+      width: 141px;
+    }
+
+    .icom5 {
+      width: 141px;
+    }
+  }
+
+  .secbox2 {
+    width: 100%;
+    height: 366px;
+    background: var(--main-color);
+
+    h2 {
+      font-size: 60px;
+      line-height: 80px;
+      padding-top: 90px;
+      padding-bottom: 50px;
+    }
+
+    .planbtn {
+      width: 200px;
+      height: 65px;
+      font-size: 21px;
+      line-height: 25px;
+      letter-spacing: 1.05px;
+    }
+  }
+
+  .secbox3 {
+    max-width: 1088px;
+    padding-bottom: 30px;
+
+    .buttonlogo {
+      scale: 1.5px;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 22px;
+    }
+  }
+
+  .footer {
+    max-width: 1080px;
+
+    p {
+      padding-top: 40px;
+      padding-bottom: 48px;
+      margin-bottom: 0px;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+  }
+}

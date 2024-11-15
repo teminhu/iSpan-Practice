@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW2</title>
+    <style>
+      .frame {
+        position: relative;
+        font-size: 18px;
+        text-align: center;
+        line-height: 50px;
+        top: 100px;
+      }
+      .table {
+        display: inline-block;
+        position: relative;
+        width: 160px;
+        height: 160px;
+        margin-inline: 10px;
+        /* background: #000; */
+      }
+
+      .row2 {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        position: absolute;
+        top: 55px;
+      }
+
+      .box1 {
+        position: absolute;
+        top: 0px;
+        left: 55px;
+        width: 50px;
+        height: 50px;
+        background-color: #fad671;
+        border-radius: 20px 20px 0px 0px;
+      }
+
+      .box2 {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: #fad671;
+        border-radius: 0px 20px 20px 0px;
+      }
+
+      .box3 {
+        position: absolute;
+        bottom: 0;
+        left: 55px;
+        width: 50px;
+        height: 50px;
+        background-color: #fad671;
+        border-radius: 0px 0px 20px 20px;
+      }
+
+      .box4 {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: #fad671;
+        border-radius: 20px 0px 0px 20px;
+      }
+      .choose {
+        background: #f38226;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>鍵盤的向右鍵按了會依位次選取，到最後一個座位後會換下一桌，到最後一個座位後就停在最後一個位置
+      鍵盤的向左鍵按了會依位次反向選取，到第一個座位後會換上一桌，到最前一個座位後就停在最前一個位置</p>
+    <div class="frame">
+      <div class="table table1">
+        <div class="row1 box1">1</div>
+        <div class="row2">
+          <div class="box4">4</div>
+          <div class="box2">2</div>
+        </div>
+        <div class="row3 box3">3</div>
+      </div>
+      <div class="table table2">
+        <div class="row1 box1">1</div>
+        <div class="row2">
+          <div class="box4">4</div>
+          <div class="box2">2</div>
+        </div>
+        <div class="row3 box3">3</div>
+      </div>
+      <div class="table table3">
+        <div class="row1 box1">1</div>
+        <div class="row2">
+          <div class="box4">4</div>
+          <div class="box2">2</div>
+        </div>
+        <div class="row3 box3">3</div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+      let currentTable = 1;
+      let currentBox = 0;
+
+      $(window).on("keydown", (e) => {
+        if (e.key === "ArrowRight") {
+          const choosebox = $(`.table${currentTable} .box${currentBox}`);
+
+          if (currentBox < 4) {
+            choosebox.removeClass("choose");
+            currentBox++;
+            $(`.table${currentTable} .box${currentBox}`).addClass("choose");
+          } else {
+            choosebox.removeClass("choose");
+            currentTable++;
+            if (currentTable > 3) {
+              currentTable = 3;
+              currentBox = 4;
+            } else {
+              currentBox = 1;
+            }
+            $(`.table${currentTable} .box${currentBox}`).addClass("choose");
+          }
+        }
+        console.log(currentTable, currentBox);
+        if (e.key === "ArrowLeft") {
+          const choosebox = $(`.table${currentTable} .box${currentBox}`);
+
+          if (currentBox > 1) {
+            choosebox.removeClass("choose");
+            currentBox--;
+            $(`.table${currentTable} .box${currentBox}`).addClass("choose");
+          } else {
+            choosebox.removeClass("choose");
+            currentTable--;
+            if (currentTable < 1) {
+              currentTable = 1;
+              currentBox = 1;
+            } else {
+              currentBox = 4;
+            }
+            $(`.table${currentTable} .box${currentBox}`).addClass("choose");
+          }
+        }
+      });
+
+      // JS寫法;
+
+      // window.addEventListener("keydown", (e) => {
+      //   const choosebox = document.querySelector(
+      //     `.table${currentTable} .box${currentBox}`
+      //   );
+
+      //   if (e.key === "ArrowRight") {
+      //     if (choosebox) {
+      //       choosebox.classList.remove("choose");
+      //     }
+
+      //     if (currentBox < 4) {
+      //       currentBox++;
+      //     } else {
+      //       currentBox = 1;
+      //       currentTable++;
+      //       if (currentTable > 3) {
+      //         currentTable = 3;
+      //         currentBox = 4;
+      //       }
+      //     }
+      //     const newChooseBox = document.querySelector(
+      //       `.table${currentTable} .box${currentBox}`
+      //     );
+      //     if (newChooseBox) {
+      //       newChooseBox.classList.add("choose");
+      //     }
+      //   }
+      //   // -------------左鍵--------------//
+      //   if (e.key === "ArrowLeft") {
+      //     if (choosebox) {
+      //       choosebox.classList.remove("choose");
+      //     }
+
+      //     if (currentBox > 1) {
+      //       currentBox--;
+      //     } else {
+      //       currentBox = 4;
+      //       currentTable--;
+      //       if (currentTable < 1) {
+      //         currentTable = 1;
+      //         currentBox = 1;
+      //       }
+      //     }
+
+      //     const newChooseBox = document.querySelector(
+      //       `.table${currentTable} .box${currentBox}`
+      //     );
+      //     if (newChooseBox) {
+      //       newChooseBox.classList.add("choose");
+      //     }
+      //   }
+      // });
+    </script>
+  </body>
+</html>

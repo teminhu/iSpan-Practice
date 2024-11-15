@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW1</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        width: 600px;
+      }
+      .row {
+        display: flex;
+        padding: 10px;
+        background-color: #c6c5c5;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+      .active {
+        background-color: #f6b46d;
+      }
+      .empty {
+        background-color: #f6b46d;
+        color: #fff;
+      }
+      label {
+        min-width: 50px;
+        padding-left: 5px;
+        padding-right: 20px;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        border: none;
+      }
+      .row1 {
+        display: flex;
+        justify-content: flex-end;
+      }
+      button {
+        margin-right: 10px;
+      }
+      .row2 {
+        position: relative;
+      }
+      .svgbox {
+        width: 70px;
+        height: 53px;
+        position: absolute;
+        right: 12px;
+        bottom: 0px;
+        overflow: hidden;
+        /* background: #000; */
+      }
+
+      .erroricon {
+        transition: 0.8s ease;
+        transform: rotate(-180deg);
+        transform-origin: bottom;
+        z-index: 100;
+        float: right;
+        translate: -5px 10px;
+        scale: 1.08;
+      }
+      .showerror {
+        transform: rotate(0deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="row row1">
+          <button type="submit">送出按鈕</button>
+          <input type="submit" value="送出input" />
+        </div>
+        <div class="row row2">
+          <label for="inpu1" name="input1">inpu1</label>
+          <input id="inpu1" type="text" />
+          <div class="svgbox">
+            <svg
+              class="erroricon"
+              width="28"
+              height="43"
+              viewBox="0 0 28 43"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16 27.8582C22.7846 26.8878 28 21.0529 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.0529 5.21541 26.8878 12 27.8582L12 42.8L16 42.8L16 27.8582Z"
+                fill="#CE1D6F"
+              />
+              <path
+                d="M8.38748 5.58119C7.61255 4.80627 6.35614 4.80627 5.58121 5.58119C4.80627 6.35613 4.80627 7.61254 5.58121 8.38746L11.1937 14L5.5812 19.6125C4.80627 20.3875 4.80627 21.6439 5.5812 22.4188C6.35614 23.1937 7.61254 23.1937 8.38748 22.4188L14 16.8063L19.6125 22.4188C20.3875 23.1937 21.644 23.1937 22.4188 22.4188C23.1937 21.6439 23.1937 20.3875 22.4188 19.6125L16.8063 14L22.4188 8.38746C23.1937 7.61254 23.1937 6.35613 22.4188 5.58119C21.644 4.80627 20.3875 4.80627 19.6125 5.58119L14 11.1937L8.38748 5.58119Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+      const erroricon = ``;
+      $(".row")
+        .on("focusout", (e) => {
+          $(e.currentTarget).removeClass("active");
+        })
+        .on("focusin", (e) => {
+          $(e.currentTarget).addClass("active");
+        });
+      $("[type=submit]").on("click", (e) => {
+        let sumbitCheck = true;
+        e.preventDefault();
+        $("input[type=text]").closest(".row").removeClass("empty");
+        $(".erroricon").removeClass("showerror");
+
+        if ($("input[type=text]").val() === "") {
+          // $("input[type=text]").closest(".row").addClass("empty");
+          $(".erroricon").addClass("showerror");
+          sumbitCheck = false;
+        }
+      });
+    </script>
+  </body>
+</html>

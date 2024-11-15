@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW4</title>
+    <style>
+      .frame {
+        gap: 60px;
+        position: relative;
+        font-size: 18px;
+        text-align: center;
+        line-height: 50px;
+        top: 100px;
+      }
+      .table {
+        display: inline-block;
+        position: relative;
+        width: 160px;
+        height: 160px;
+        margin-inline: 10px;
+        /* background: #000; */
+      }
+
+      .row2 {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        position: absolute;
+        top: 55px;
+      }
+
+      .box1 {
+        position: absolute;
+        top: 0px;
+        left: 55px;
+        width: 50px;
+        height: 50px;
+        background-color: #fad671;
+        border-radius: 20px 20px 0px 0px;
+      }
+
+      .box2 {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: #fad671;
+        border-radius: 0px 20px 20px 0px;
+      }
+
+      .box3 {
+        position: absolute;
+        bottom: 0;
+        left: 55px;
+        width: 50px;
+        height: 50px;
+        background-color: #fad671;
+        border-radius: 0px 0px 20px 20px;
+      }
+
+      .box4 {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: #fad671;
+        border-radius: 20px 0px 0px 20px;
+      }
+      .choose {
+        background: #f38226;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>鍵盤的向右鍵按了會依位次選取，到最後一個座位後會換下一桌，在這張桌子的所有位次之後先選擇桌子，到最後一個座位後就停在最後一個位置
+      鍵盤的向左鍵按了會依位次反向選取，到第一個座位後會換上一桌，到最前一個座位後就停在最前一個位置
+      </p>
+    <div class="frame">
+      <div class="table table1" data-seat="5">
+        <div class="row1 box1" data-seat="1">1</div>
+        <div class="row2">
+          <div class="box4" data-seat="4">4</div>
+          <div class="box2" data-seat="2">2</div>
+        </div>
+        <div class="row3 box3" data-seat="3">3</div>
+      </div>
+      <div class="table table2" data-seat="10">
+        <div class="row1 box1" data-seat="6">1</div>
+        <div class="row2">
+          <div class="box4" data-seat="9">4</div>
+          <div class="box2" data-seat="7">2</div>
+        </div>
+        <div class="row3 box3" data-seat="8">3</div>
+      </div>
+      <div class="table table3" data-seat="15">
+        <div class="row1 box1" data-seat="11">1</div>
+        <div class="row2">
+          <div class="box4" data-seat="14">4</div>
+          <div class="box2" data-seat="12">2</div>
+        </div>
+        <div class="row3 box3" data-seat="13">3</div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+      let i = 0;
+      // $(window).on("keydown", (e) => {
+      //   if (e.key === "ArrowRight") {
+      //     // console.log("xxx");
+      //     // console.log(i);
+      //     $(`[data-seat=${i}]`).removeClass("choose");
+      //     if (i < 15) {
+      //       i++;
+      //     }
+      //     console.log(i);
+      //     $(`[data-seat=${i}]`).addClass("choose");
+      //   }
+
+      //   if (e.key === "ArrowLeft") {
+      //     // console.log("haha");
+      //     $(`[data-seat=${i}]`).removeClass("choose");
+      //     if (i > 1) {
+      //       i--;
+      //     }
+      //     console.log(i);
+      //     $(`[data-seat=${i}]`).addClass("choose");
+      //   }
+      // });
+
+      // js寫法
+      window.addEventListener("keydown", (e) => {
+        const seat = document.querySelector(`[data-seat="${i}"]`);
+        if (seat) {
+          seat.classList.remove("choose");
+        }
+        if (e.key === "ArrowRight") {
+          if (i < 15) {
+            i++;
+          }
+        }
+        if (e.key === "ArrowLeft") {
+          if (i > 1) {
+            i--;
+          }
+        }
+        const newSeat = document.querySelector(`[data-seat="${i}"]`);
+        if (newSeat) {
+          newSeat.classList.add("choose");
+          // console.log(i);
+        }
+      });
+    </script>
+  </body>
+</html>
